@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkmhfr_docs=self.webpackChunkkmhfr_docs||[]).push([[2138],{8558:(t,e,s)=>{s.r(e),s.d(e,{default:()=>r});var u=s(3274);function r(){return(0,u.jsx)("input",{type:"text",style:{width:"80%"}})}}}]);
