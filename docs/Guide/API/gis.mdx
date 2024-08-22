@@ -1,0 +1,4624 @@
+---
+sidebar_position: 7
+title: GIS
+---
+
+import BrowserWindow from '../../../src/components/BrowserWindow'
+
+# API
+
+This is a guide of all GIS API endpoints for KMHFR
+
+### `api gis_constituency_bound_read`
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/constituency_bound/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/constituency_bound/{id}/`
+
+Retrieves a particular constituency boundary detail
+
+<h3 id="api_gis_constituency_bound_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this constituency boundary.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "bound": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_constituency_bound_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ConstituencyBound](schema#constituencybound)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_constituency_bound_update`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/constituency_bound/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/gis/constituency_bound/{id}/`
+
+Retrieves a particular constituency boundary detail
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_constituency_bound_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[ConstituencyBound](schema#constituencybound)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this constituency boundary.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "bound": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_constituency_bound_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ConstituencyBound](schema#constituencybound)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_constituency_bound_partial_update`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/constituency_bound/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/gis/constituency_bound/{id}/`
+
+Retrieves a particular constituency boundary detail
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_constituency_bound_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[ConstituencyBound](schema#constituencybound)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this constituency boundary.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "bound": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_constituency_bound_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ConstituencyBound](schema#constituencybound)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_constituency_bound_delete`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/constituency_bound/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/gis/constituency_bound/{id}/`
+
+Retrieves a particular constituency boundary detail
+
+<h3 id="api_gis_constituency_bound_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this constituency boundary.|
+
+<h3 id="api_gis_constituency_bound_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_constituency_boundaries_list`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/constituency_boundaries/',
+{
+  method: 'GET'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/constituency_boundaries/`
+
+*Lists and creates constituency boundaries*
+
+name --  A list of comma separated constituency names
+code  -- A list of comma separated constituency codes
+area -- A list of comma separated area pks
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_gis_constituency_boundaries_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+
+<h3 id="api_gis_constituency_boundaries_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_constituency_boundaries_create`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/constituency_boundaries/',
+{
+  method: 'POST'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/gis/constituency_boundaries/`
+
+*Lists and creates constituency boundaries*
+
+name --  A list of comma separated constituency names
+code  -- A list of comma separated constituency codes
+area -- A list of comma separated area pks
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_gis_constituency_boundaries_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_constituency_boundaries_read`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/constituency_boundaries/{id}/',
+{
+  method: 'GET'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/constituency_boundaries/{id}/`
+
+Retrieves a particular constituency boundary detail
+
+<h3 id="api_gis_constituency_boundaries_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this constituency boundary.|
+
+<h3 id="api_gis_constituency_boundaries_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_constituency_boundaries_update`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/constituency_boundaries/{id}/',
+{
+  method: 'PUT'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/gis/constituency_boundaries/{id}/`
+
+Retrieves a particular constituency boundary detail
+
+<h3 id="api_gis_constituency_boundaries_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this constituency boundary.|
+
+<h3 id="api_gis_constituency_boundaries_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_constituency_boundaries_partial_update`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/constituency_boundaries/{id}/',
+{
+  method: 'PATCH'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/gis/constituency_boundaries/{id}/`
+
+Retrieves a particular constituency boundary detail
+
+<h3 id="api_gis_constituency_boundaries_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this constituency boundary.|
+
+<h3 id="api_gis_constituency_boundaries_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_constituency_boundaries_delete`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/constituency_boundaries/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/gis/constituency_boundaries/{id}/`
+
+Retrieves a particular constituency boundary detail
+
+<h3 id="api_gis_constituency_boundaries_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this constituency boundary.|
+
+<h3 id="api_gis_constituency_boundaries_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_coordinates_list`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/coordinates/',
+{
+  method: 'GET'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/coordinates/`
+
+*Lists and creates facility coordinates*
+
+ward -- A list of comma separated ward pks
+constituency -- A list of comma separated constituency pks
+county -- A list of comma separated county pks
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_gis_coordinates_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+
+<h3 id="api_gis_coordinates_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_coordinates_create`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/coordinates/',
+{
+  method: 'POST'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/gis/coordinates/`
+
+*Lists and creates facility coordinates*
+
+ward -- A list of comma separated ward pks
+constituency -- A list of comma separated constituency pks
+county -- A list of comma separated county pks
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_gis_coordinates_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_coordinates_read`
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/coordinates/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/coordinates/{id}/`
+
+Retrieves a particular facility coordinates details
+
+<h3 id="api_gis_coordinates_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this facility coordinates.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "facility_name": "string",
+  "facility_id": "string",
+  "ward": "string",
+  "constituency": "string",
+  "county": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "source": "07b8e003-7027-443f-88b0-24a5eb1cc68b",
+  "method": "caafb54c-a504-4c51-af48-219509c5f1d6"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_coordinates_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityCoordinatesDetail](schema#facilitycoordinatesdetail)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_coordinates_update`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "source": "07b8e003-7027-443f-88b0-24a5eb1cc68b",
+  "method": "caafb54c-a504-4c51-af48-219509c5f1d6"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/coordinates/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/gis/coordinates/{id}/`
+
+Retrieves a particular facility coordinates details
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "source": "07b8e003-7027-443f-88b0-24a5eb1cc68b",
+  "method": "caafb54c-a504-4c51-af48-219509c5f1d6"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_coordinates_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[FacilityCoordinatesDetail](schema#facilitycoordinatesdetail)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this facility coordinates.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "facility_name": "string",
+  "facility_id": "string",
+  "ward": "string",
+  "constituency": "string",
+  "county": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "source": "07b8e003-7027-443f-88b0-24a5eb1cc68b",
+  "method": "caafb54c-a504-4c51-af48-219509c5f1d6"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_coordinates_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityCoordinatesDetail](schema#facilitycoordinatesdetail)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_coordinates_partial_update`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "source": "07b8e003-7027-443f-88b0-24a5eb1cc68b",
+  "method": "caafb54c-a504-4c51-af48-219509c5f1d6"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/coordinates/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/gis/coordinates/{id}/`
+
+Retrieves a particular facility coordinates details
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "source": "07b8e003-7027-443f-88b0-24a5eb1cc68b",
+  "method": "caafb54c-a504-4c51-af48-219509c5f1d6"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_coordinates_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[FacilityCoordinatesDetail](schema#facilitycoordinatesdetail)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this facility coordinates.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "facility_name": "string",
+  "facility_id": "string",
+  "ward": "string",
+  "constituency": "string",
+  "county": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "source": "07b8e003-7027-443f-88b0-24a5eb1cc68b",
+  "method": "caafb54c-a504-4c51-af48-219509c5f1d6"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_coordinates_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityCoordinatesDetail](schema#facilitycoordinatesdetail)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_coordinates_delete`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/coordinates/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/gis/coordinates/{id}/`
+
+Retrieves a particular facility coordinates details
+
+<h3 id="api_gis_coordinates_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this facility coordinates.|
+
+<h3 id="api_gis_coordinates_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_country_borders_list`
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/country_borders/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/country_borders/`
+
+*Lists and creates ward borders*
+
+name -- A list of comma separated ward names
+code -- A  list of comma separated ward codes
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_gis_country_borders_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "center": "string",
+      "facility_count": "string",
+      "density": "string",
+      "bound": "string",
+      "geometry": "string",
+      "name": "string",
+      "code": "string"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_country_borders_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_gis_country_borders_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[WorldBorder](schema#worldborder)]|true|none|none|
+|»» id|string(uuid)|false|read-only|none|
+|»» center|string|false|read-only|none|
+|»» facility_count|string|false|read-only|none|
+|»» density|string|false|read-only|none|
+|»» bound|string|false|read-only|none|
+|»» geometry|string|false|read-only|none|
+|»» name|string|true|none|none|
+|»» code|string|true|none|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_country_borders_create`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "name": "string",
+  "code": "string"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/country_borders/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/gis/country_borders/`
+
+*Lists and creates ward borders*
+
+name -- A list of comma separated ward names
+code -- A  list of comma separated ward codes
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "name": "string",
+  "code": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_country_borders_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[WorldBorder](schema#worldborder)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "center": "string",
+  "facility_count": "string",
+  "density": "string",
+  "bound": "string",
+  "geometry": "string",
+  "name": "string",
+  "code": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_country_borders_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[WorldBorder](schema#worldborder)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_country_borders_read`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/country_borders/{id}/',
+{
+  method: 'GET'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/country_borders/{id}/`
+
+Retrieves a particular ward border details
+
+<h3 id="api_gis_country_borders_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this world border.|
+
+<h3 id="api_gis_country_borders_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_country_borders_update`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/country_borders/{id}/',
+{
+  method: 'PUT'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/gis/country_borders/{id}/`
+
+Retrieves a particular ward border details
+
+<h3 id="api_gis_country_borders_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this world border.|
+
+<h3 id="api_gis_country_borders_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_country_borders_partial_update`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/country_borders/{id}/',
+{
+  method: 'PATCH'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/gis/country_borders/{id}/`
+
+Retrieves a particular ward border details
+
+<h3 id="api_gis_country_borders_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this world border.|
+
+<h3 id="api_gis_country_borders_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_country_borders_delete`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/country_borders/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/gis/country_borders/{id}/`
+
+Retrieves a particular ward border details
+
+<h3 id="api_gis_country_borders_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this world border.|
+
+<h3 id="api_gis_country_borders_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_county_bound_read`
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/county_bound/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/county_bound/{id}/`
+
+Retrieves a particular county boundary detail
+
+<h3 id="api_gis_county_bound_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this county boundary.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "bound": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_county_bound_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CountyBound](schema#countybound)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_county_bound_update`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/county_bound/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/gis/county_bound/{id}/`
+
+Retrieves a particular county boundary detail
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_county_bound_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CountyBound](schema#countybound)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this county boundary.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "bound": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_county_bound_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CountyBound](schema#countybound)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_county_bound_partial_update`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/county_bound/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/gis/county_bound/{id}/`
+
+Retrieves a particular county boundary detail
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_county_bound_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CountyBound](schema#countybound)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this county boundary.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "bound": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_county_bound_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CountyBound](schema#countybound)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_county_bound_delete`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/county_bound/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/gis/county_bound/{id}/`
+
+Retrieves a particular county boundary detail
+
+<h3 id="api_gis_county_bound_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this county boundary.|
+
+<h3 id="api_gis_county_bound_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_county_boundaries_list`
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/county_boundaries/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/county_boundaries/`
+
+*Lists and creates county boundaries*
+
+name --  A list of comma separated county names
+code  -- A list of comma separated county codes
+area -- A list of comma separated area pks
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_gis_county_boundaries_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "center": "string",
+      "facility_count": "string",
+      "density": "string",
+      "bound": "string",
+      "constituency_boundary_ids": "string",
+      "county_id": "string",
+      "geometry": "string",
+      "name": "string",
+      "code": "string"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_county_boundaries_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_gis_county_boundaries_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[CountyBoundary](schema#countyboundary)]|true|none|none|
+|»» id|string(uuid)|false|read-only|none|
+|»» center|string|false|read-only|none|
+|»» facility_count|string|false|read-only|none|
+|»» density|string|false|read-only|none|
+|»» bound|string|false|read-only|none|
+|»» constituency_boundary_ids|string|false|read-only|none|
+|»» county_id|string|false|read-only|none|
+|»» geometry|string|false|read-only|none|
+|»» name|string|true|none|none|
+|»» code|string|true|none|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_county_boundaries_create`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "name": "string",
+  "code": "string"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/county_boundaries/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/gis/county_boundaries/`
+
+*Lists and creates county boundaries*
+
+name --  A list of comma separated county names
+code  -- A list of comma separated county codes
+area -- A list of comma separated area pks
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "name": "string",
+  "code": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_county_boundaries_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CountyBoundary](schema#countyboundary)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "center": "string",
+  "facility_count": "string",
+  "density": "string",
+  "bound": "string",
+  "constituency_boundary_ids": "string",
+  "county_id": "string",
+  "geometry": "string",
+  "name": "string",
+  "code": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_county_boundaries_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CountyBoundary](schema#countyboundary)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_county_boundaries_read`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/county_boundaries/{id}/',
+{
+  method: 'GET'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/county_boundaries/{id}/`
+
+Retrieves a particular county boundary detail
+
+<h3 id="api_gis_county_boundaries_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this county boundary.|
+
+<h3 id="api_gis_county_boundaries_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_county_boundaries_update`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/county_boundaries/{id}/',
+{
+  method: 'PUT'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/gis/county_boundaries/{id}/`
+
+Retrieves a particular county boundary detail
+
+<h3 id="api_gis_county_boundaries_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this county boundary.|
+
+<h3 id="api_gis_county_boundaries_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_county_boundaries_partial_update`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/county_boundaries/{id}/',
+{
+  method: 'PATCH'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/gis/county_boundaries/{id}/`
+
+Retrieves a particular county boundary detail
+
+<h3 id="api_gis_county_boundaries_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this county boundary.|
+
+<h3 id="api_gis_county_boundaries_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_county_boundaries_delete`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/county_boundaries/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/gis/county_boundaries/{id}/`
+
+Retrieves a particular county boundary detail
+
+<h3 id="api_gis_county_boundaries_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this county boundary.|
+
+<h3 id="api_gis_county_boundaries_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_drilldown_constituency_read`
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/drilldown/constituency/{code}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/drilldown/constituency/{code}/`
+
+<h3 id="api_gis_drilldown_constituency_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|code|path|string|true|none|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "geometry": "string",
+      "center": "string",
+      "bound": "string",
+      "id": "string",
+      "area_id": "string",
+      "facility_count": "string",
+      "name": "string",
+      "county_name": "string",
+      "county_code": "string",
+      "constituency_code": "string",
+      "constituency_name": "string"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_drilldown_constituency_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_gis_drilldown_constituency_read-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[DrillWardBoundary](schema#drillwardboundary)]|true|none|none|
+|»» geometry|string|false|read-only|none|
+|»» center|string|false|read-only|none|
+|»» bound|string|false|read-only|none|
+|»» id|string|false|read-only|none|
+|»» area_id|string|false|read-only|none|
+|»» facility_count|string|false|read-only|none|
+|»» name|string|false|read-only|none|
+|»» county_name|string|false|read-only|none|
+|»» county_code|string|false|read-only|none|
+|»» constituency_code|string|false|read-only|none|
+|»» constituency_name|string|false|read-only|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_drilldown_country_list`
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/drilldown/country/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/drilldown/country/`
+
+<h3 id="api_gis_drilldown_country_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "geometry": "string",
+      "center": "string",
+      "bound": "string",
+      "id": "string",
+      "facility_count": "string",
+      "name": "string"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_drilldown_country_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_gis_drilldown_country_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[DrillCountyBoundary](schema#drillcountyboundary)]|true|none|none|
+|»» geometry|string|false|read-only|none|
+|»» center|string|false|read-only|none|
+|»» bound|string|false|read-only|none|
+|»» id|string|false|read-only|none|
+|»» facility_count|string|false|read-only|none|
+|»» name|string|false|read-only|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_drilldown_county_read`
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/drilldown/county/{code}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/drilldown/county/{code}/`
+
+<h3 id="api_gis_drilldown_county_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|code|path|string|true|none|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "geometry": "string",
+      "center": "string",
+      "bound": "string",
+      "id": "string",
+      "facility_count": "string",
+      "name": "string"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_drilldown_county_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_gis_drilldown_county_read-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[DrillConstituencyBoundary](schema#drillconstituencyboundary)]|true|none|none|
+|»» geometry|string|false|read-only|none|
+|»» center|string|false|read-only|none|
+|»» bound|string|false|read-only|none|
+|»» id|string|false|read-only|none|
+|»» facility_count|string|false|read-only|none|
+|»» name|string|false|read-only|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_drilldown_facility_list`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/drilldown/facility/',
+{
+  method: 'GET'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/drilldown/facility/`
+
+Gets all facility geocoordinates (highly slimmed down)
+
+<h3 id="api_gis_drilldown_facility_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_drilldown_ward_read`
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/drilldown/ward/{code}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/drilldown/ward/{code}/`
+
+<h3 id="api_gis_drilldown_ward_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|code|path|string|true|none|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "geometry": "string",
+  "center": "string",
+  "bound": "string",
+  "id": "string",
+  "area_id": "string",
+  "facility_count": "string",
+  "name": "string",
+  "county_name": "string",
+  "county_code": "string",
+  "constituency_code": "string",
+  "constituency_name": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_drilldown_ward_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[DrillWardBoundary](schema#drillwardboundary)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_drilldown_ward_update`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/drilldown/ward/{code}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/gis/drilldown/ward/{code}/`
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_drilldown_ward_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[DrillWardBoundary](schema#drillwardboundary)|true|none|
+|code|path|string|true|none|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "geometry": "string",
+  "center": "string",
+  "bound": "string",
+  "id": "string",
+  "area_id": "string",
+  "facility_count": "string",
+  "name": "string",
+  "county_name": "string",
+  "county_code": "string",
+  "constituency_code": "string",
+  "constituency_name": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_drilldown_ward_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[DrillWardBoundary](schema#drillwardboundary)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_drilldown_ward_partial_update`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/drilldown/ward/{code}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/gis/drilldown/ward/{code}/`
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_drilldown_ward_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[DrillWardBoundary](schema#drillwardboundary)|true|none|
+|code|path|string|true|none|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "geometry": "string",
+  "center": "string",
+  "bound": "string",
+  "id": "string",
+  "area_id": "string",
+  "facility_count": "string",
+  "name": "string",
+  "county_name": "string",
+  "county_code": "string",
+  "constituency_code": "string",
+  "constituency_name": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_drilldown_ward_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[DrillWardBoundary](schema#drillwardboundary)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_drilldown_ward_delete`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/drilldown/ward/{code}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/gis/drilldown/ward/{code}/`
+
+<h3 id="api_gis_drilldown_ward_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|code|path|string|true|none|
+
+<h3 id="api_gis_drilldown_ward_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_facility_coordinates_list`
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/facility_coordinates/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/facility_coordinates/`
+
+*Lists and creates facility coordinates*
+
+ward -- A list of comma separated ward pks
+constituency -- A list of comma separated constituency pks
+county -- A list of comma separated county pks
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_gis_facility_coordinates_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "coordinates": "string",
+      "collection_date": "2019-08-24T14:15:22Z",
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_facility_coordinates_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_gis_facility_coordinates_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[FacilityCoordinateSimple](schema#facilitycoordinatesimple)]|true|none|none|
+|»» id|string(uuid)|false|read-only|none|
+|»» created|string(date-time)|false|none|none|
+|»» updated|string(date-time)|false|none|none|
+|»» deleted|boolean|false|none|none|
+|»» active|boolean|false|none|Indicates whether the record has been retired?|
+|»» search|string|false|read-only|none|
+|»» coordinates|string|true|none|none|
+|»» collection_date|string(date-time)|false|none|none|
+|»» created_by|integer|false|none|none|
+|»» updated_by|integer|false|none|none|
+|»» facility|string(uuid)|true|none|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_facility_coordinates_create`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/facility_coordinates/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/gis/facility_coordinates/`
+
+*Lists and creates facility coordinates*
+
+ward -- A list of comma separated ward pks
+constituency -- A list of comma separated constituency pks
+county -- A list of comma separated county pks
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_facility_coordinates_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[FacilityCoordinateSimple](schema#facilitycoordinatesimple)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_facility_coordinates_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityCoordinateSimple](schema#facilitycoordinatesimple)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_facility_coordinates_read`
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/facility_coordinates/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/facility_coordinates/{id}/`
+
+*Lists and creates facility coordinates*
+
+ward -- A list of comma separated ward pks
+constituency -- A list of comma separated constituency pks
+county -- A list of comma separated county pks
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_gis_facility_coordinates_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this facility coordinates.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_facility_coordinates_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityCoordinateSimple](schema#facilitycoordinatesimple)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_facility_coordinates_update`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/facility_coordinates/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/gis/facility_coordinates/{id}/`
+
+*Lists and creates facility coordinates*
+
+ward -- A list of comma separated ward pks
+constituency -- A list of comma separated constituency pks
+county -- A list of comma separated county pks
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_facility_coordinates_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[FacilityCoordinateSimple](schema#facilitycoordinatesimple)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this facility coordinates.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_facility_coordinates_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityCoordinateSimple](schema#facilitycoordinatesimple)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_facility_coordinates_partial_update`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/facility_coordinates/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/gis/facility_coordinates/{id}/`
+
+*Lists and creates facility coordinates*
+
+ward -- A list of comma separated ward pks
+constituency -- A list of comma separated constituency pks
+county -- A list of comma separated county pks
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_facility_coordinates_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[FacilityCoordinateSimple](schema#facilitycoordinatesimple)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this facility coordinates.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_facility_coordinates_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityCoordinateSimple](schema#facilitycoordinatesimple)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_facility_coordinates_delete`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/facility_coordinates/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/gis/facility_coordinates/{id}/`
+
+*Lists and creates facility coordinates*
+
+ward -- A list of comma separated ward pks
+constituency -- A list of comma separated constituency pks
+county -- A list of comma separated county pks
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_gis_facility_coordinates_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this facility coordinates.|
+
+<h3 id="api_gis_facility_coordinates_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_geo_code_methods_list`
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/geo_code_methods/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/geo_code_methods/`
+
+*Lists and creates Geo-Code collection methods*
+
+name -- Name of the Geo-Code Collectiom method
+description -- Description of the Geo-Code collection method
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_gis_geo_code_methods_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "name": "string",
+      "description": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_geo_code_methods_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_gis_geo_code_methods_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[GeoCodeMethod](schema#geocodemethod)]|true|none|none|
+|»» id|string(uuid)|false|read-only|none|
+|»» created|string(date-time)|false|none|none|
+|»» updated|string(date-time)|false|none|none|
+|»» deleted|boolean|false|none|none|
+|»» active|boolean|false|none|Indicates whether the record has been retired?|
+|»» search|string|false|read-only|none|
+|»» name|string|true|none|The name of the method.|
+|»» description|string¦null|false|none|A short description of the method|
+|»» created_by|integer|false|none|none|
+|»» updated_by|integer|false|none|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_geo_code_methods_create`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/geo_code_methods/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/gis/geo_code_methods/`
+
+*Lists and creates Geo-Code collection methods*
+
+name -- Name of the Geo-Code Collectiom method
+description -- Description of the Geo-Code collection method
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_geo_code_methods_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[GeoCodeMethod](schema#geocodemethod)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_geo_code_methods_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[GeoCodeMethod](schema#geocodemethod)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_geo_code_methods_read`
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/geo_code_methods/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/geo_code_methods/{id}/`
+
+Retrieves a particular Geo-Code Collectiom method
+
+<h3 id="api_gis_geo_code_methods_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this geo code method.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_geo_code_methods_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[GeoCodeMethod](schema#geocodemethod)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_geo_code_methods_update`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/geo_code_methods/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/gis/geo_code_methods/{id}/`
+
+Retrieves a particular Geo-Code Collectiom method
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_geo_code_methods_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[GeoCodeMethod](schema#geocodemethod)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this geo code method.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_geo_code_methods_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[GeoCodeMethod](schema#geocodemethod)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_geo_code_methods_partial_update`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/geo_code_methods/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/gis/geo_code_methods/{id}/`
+
+Retrieves a particular Geo-Code Collectiom method
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_geo_code_methods_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[GeoCodeMethod](schema#geocodemethod)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this geo code method.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_geo_code_methods_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[GeoCodeMethod](schema#geocodemethod)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_geo_code_methods_delete`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/geo_code_methods/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/gis/geo_code_methods/{id}/`
+
+Retrieves a particular Geo-Code Collectiom method
+
+<h3 id="api_gis_geo_code_methods_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this geo code method.|
+
+<h3 id="api_gis_geo_code_methods_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_geo_code_sources_list`
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/geo_code_sources/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/geo_code_sources/`
+
+*List and creates Geo-Code sources*
+
+name -- Name of the Geo Code Source
+description -- The description of the Geo Code Source
+abbreviation -- The abbreviation of the Geo-Code source
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_gis_geo_code_sources_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "name": "string",
+      "description": "string",
+      "abbreviation": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_geo_code_sources_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_gis_geo_code_sources_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[GeoCodeSource](schema#geocodesource)]|true|none|none|
+|»» id|string(uuid)|false|read-only|none|
+|»» created|string(date-time)|false|none|none|
+|»» updated|string(date-time)|false|none|none|
+|»» deleted|boolean|false|none|none|
+|»» active|boolean|false|none|Indicates whether the record has been retired?|
+|»» search|string|false|read-only|none|
+|»» name|string|true|none|The name of the collecting organization|
+|»» description|string¦null|false|none|A short summary of the collecting organization|
+|»» abbreviation|string¦null|false|none|An acronym of the collecting or e.g SAM|
+|»» created_by|integer|false|none|none|
+|»» updated_by|integer|false|none|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_geo_code_sources_create`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/geo_code_sources/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/gis/geo_code_sources/`
+
+*List and creates Geo-Code sources*
+
+name -- Name of the Geo Code Source
+description -- The description of the Geo Code Source
+abbreviation -- The abbreviation of the Geo-Code source
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_geo_code_sources_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[GeoCodeSource](schema#geocodesource)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_geo_code_sources_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[GeoCodeSource](schema#geocodesource)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_geo_code_sources_read`
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/geo_code_sources/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/geo_code_sources/{id}/`
+
+Retrieves a particular Geo Code Source
+
+<h3 id="api_gis_geo_code_sources_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this geo code source.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_geo_code_sources_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[GeoCodeSource](schema#geocodesource)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_geo_code_sources_update`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/geo_code_sources/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/gis/geo_code_sources/{id}/`
+
+Retrieves a particular Geo Code Source
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_geo_code_sources_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[GeoCodeSource](schema#geocodesource)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this geo code source.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_geo_code_sources_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[GeoCodeSource](schema#geocodesource)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_geo_code_sources_partial_update`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/geo_code_sources/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/gis/geo_code_sources/{id}/`
+
+Retrieves a particular Geo Code Source
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_geo_code_sources_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[GeoCodeSource](schema#geocodesource)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this geo code source.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_geo_code_sources_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[GeoCodeSource](schema#geocodesource)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_geo_code_sources_delete`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/geo_code_sources/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/gis/geo_code_sources/{id}/`
+
+Retrieves a particular Geo Code Source
+
+<h3 id="api_gis_geo_code_sources_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this geo code source.|
+
+<h3 id="api_gis_geo_code_sources_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_ikowapi_create`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/ikowapi/',
+{
+  method: 'POST'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/gis/ikowapi/`
+
+A utility service to determine administrative unit based on geocoordinates.
+
+<h3 id="api_gis_ikowapi_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_ward_boundaries_list`
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/ward_boundaries/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/ward_boundaries/`
+
+*Lists and creates ward boundaries*
+
+name --  A list of comma separated ward names
+code  -- A list of comma separated ward codes
+area -- A list of comma separated area pks
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_gis_ward_boundaries_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "center": "string",
+      "facility_count": "string",
+      "density": "string",
+      "bound": "string",
+      "ward_id": "string",
+      "geometry": "string",
+      "name": "string",
+      "code": "string",
+      "mpoly": "string"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_ward_boundaries_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_gis_ward_boundaries_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[WardBoundary](schema#wardboundary)]|true|none|none|
+|»» id|string(uuid)|false|read-only|none|
+|»» center|string|false|read-only|none|
+|»» facility_count|string|false|read-only|none|
+|»» density|string|false|read-only|none|
+|»» bound|string|false|read-only|none|
+|»» ward_id|string|true|none|none|
+|»» geometry|string|false|read-only|none|
+|»» name|string|true|none|none|
+|»» code|string|true|none|none|
+|»» mpoly|string¦null|false|none|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_ward_boundaries_create`
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "ward_id": "string",
+  "name": "string",
+  "code": "string",
+  "mpoly": "string"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/ward_boundaries/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/gis/ward_boundaries/`
+
+*Lists and creates ward boundaries*
+
+name --  A list of comma separated ward names
+code  -- A list of comma separated ward codes
+area -- A list of comma separated area pks
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "ward_id": "string",
+  "name": "string",
+  "code": "string",
+  "mpoly": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_ward_boundaries_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[WardBoundary](schema#wardboundary)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "center": "string",
+  "facility_count": "string",
+  "density": "string",
+  "bound": "string",
+  "ward_id": "string",
+  "geometry": "string",
+  "name": "string",
+  "code": "string",
+  "mpoly": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_gis_ward_boundaries_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[WardBoundary](schema#wardboundary)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_ward_boundaries_read`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/ward_boundaries/{id}/',
+{
+  method: 'GET'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/gis/ward_boundaries/{id}/`
+
+Retrieves a particular ward boundary detail
+
+<h3 id="api_gis_ward_boundaries_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this ward boundary.|
+
+<h3 id="api_gis_ward_boundaries_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_ward_boundaries_update`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/ward_boundaries/{id}/',
+{
+  method: 'PUT'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/gis/ward_boundaries/{id}/`
+
+Retrieves a particular ward boundary detail
+
+<h3 id="api_gis_ward_boundaries_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this ward boundary.|
+
+<h3 id="api_gis_ward_boundaries_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_ward_boundaries_partial_update`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/ward_boundaries/{id}/',
+{
+  method: 'PATCH'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/gis/ward_boundaries/{id}/`
+
+Retrieves a particular ward boundary detail
+
+<h3 id="api_gis_ward_boundaries_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this ward boundary.|
+
+<h3 id="api_gis_ward_boundaries_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### `api gis_ward_boundaries_delete`
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/gis/ward_boundaries/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/gis/ward_boundaries/{id}/`
+
+Retrieves a particular ward boundary detail
+
+<h3 id="api_gis_ward_boundaries_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this ward boundary.|
+
+<h3 id="api_gis_ward_boundaries_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+
+## Schema
+
+:::info[GIS Schema]
+For more schema related to GIS refer to the [schema page](schema)
+:::
+

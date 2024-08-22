@@ -3,19 +3,19 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'KMHFR',
+  title: 'KMHFR Docs',
   tagline: 'Kenya Master Health Facility Registry',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://kmhfr-docs.github.io',
+  url: 'https://uonafya.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/kmhfr-docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ertush', // Usually your GitHub org/user name.
+  organizationName: 'uonafya', // Usually your GitHub org/user name.
   projectName: 'kmhfr-docs', // Usually your repo name.
   deploymentBranch:'master',
   onBrokenLinks: 'throw', 
@@ -40,14 +40,14 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/uonafya/kmhfr-docs/tree/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/uonafya/kmhfr-docs/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -89,7 +89,7 @@ const config: Config = {
     },
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'MINISTRY OF HEALTH',
+      title: 'KMHFR Docs',
       logo: {
         alt: 'KMHFR Logo',
         src: 'img/logo.png',
@@ -99,10 +99,11 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Docs',
+          label: 'Guide',
         },
-        {href: 'https://kmhfr.health.go.ke', label: 'Site', position: 'left'},
-        {href: 'https://elearning.health.go.ke/enrol/index.php?id=76', label: 'KMHFR E-learning', position: 'left'},
+        {href: '/blog', label: 'KMHFR blog', position: 'left'},
+        {href: 'https://kmhfr.health.go.ke', label: 'KMHFR', position: 'left'},
+        {href: 'https://elearning.health.go.ke/enrol/index.php?id=76', label: 'MOH Virtual Academy E-learning', position: 'left'},
         {href: 'https://health.go.ke', label: 'Ministry of Health', position: 'left'},
 
         // {type: 'docsVersionDropdown', position: 'right', label:'Docs Version'},
