@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkmhfr_docs=self.webpackChunkkmhfr_docs||[]).push([[8938],{8810:a=>{a.exports=JSON.parse('{"tag":{"label":"MFR","permalink":"/blog/tags/mfr","allTagsPath":"/blog/tags","count":3,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/mfr","page":1,"postsPerPage":10,"totalPages":1,"totalCount":3,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
